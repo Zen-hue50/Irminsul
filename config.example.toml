@@ -1,0 +1,23 @@
+# Irminsul • changes here take effect the next time the daemon starts.
+port = 8765
+idle_seconds = 180          # 0 disables idle detection. The grace period counts as active.
+respect_idle_inhibitors = false # true lets video players etc. keep the session active.
+checkpoint_seconds = 60     # Flush a batch of totals, only if there is activity to save.
+retention_days = 180        # 0 keeps history indefinitely; otherwise at least 30 days.
+daily_goal_minutes = 300    # Starting goal; a goal saved in the dashboard takes precedence.
+fallback_probe_seconds = 60 # Only while recently active, and only without native power/lock events.
+                            # 0 uses snapshots on session events only.
+# These apps' names and switches will not be stored. Time goes to Desktop & excluded.
+excluded_apps = []
+
+# Optional: group exact Hyprland class IDs (case-insensitive) under one key.
+[aliases]
+# "some-terminal-nightly" = "some-terminal"
+
+# Optional: override auto-detected app details. A name, category or icon can be set on its own.
+# Click an app in the dashboard to see its window class, or use `irminsul app-info CLASS`.
+# Categories: Productivity, Browsing, Communication, Entertainment, Utilities, Other.
+# Icons: code, globe, message, music, terminal, folder, brush, film, app, book.
+[apps]
+# "some-terminal" = { name = "My Terminal", category = "Utilities", icon = "terminal" }
+# "my-browser-class" = { category = "Browsing" }

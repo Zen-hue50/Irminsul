@@ -1,0 +1,140 @@
+/* Irminsul palettes. Lavender uses the original light and dark tokens in styles.css.
+   theme.css loads last, so the same selectors there can override any preset. */
+:root[data-palette="sage"]:where([data-theme="light"]) {
+  --paper:#f6f8f2; --rail:#edf1e7; --surface:#fdfff9; --surface-muted:#eef2e9;
+  --ink:#273229; --muted:#5c6b60; --soft-ink:#647163; --line:#dfe6da; --chart-line:#e4eae1;
+  --accent:#456957; --accent-ink:#365847; --accent-contrast:#fafff6; --accent-soft:#e2ebdf;
+  --accent-line:#d5e2d3; --accent-panel:#e8f0e4; --accent-faint:#f0f5ed;
+  --accent-chart:#5a7f6c; --accent-bars:#afc7b6; --ring-base:#e8ede4;
+  --ring-code:#8ea998; --ring-web:#527962; --ring-chat:#a18bb3;
+}
+:root[data-palette="sage"]:where([data-theme="dark"]) {
+  --paper:#1b241f; --rail:#202b25; --surface:#25322a; --surface-muted:#2d3b32;
+  --ink:#edf3e9; --muted:#b8c7ba; --soft-ink:#a6b7a8; --line:#37483c; --chart-line:#3d4c41;
+  --accent:#b4cfb4; --accent-ink:#d6e8d2; --accent-contrast:#23352a; --accent-soft:#34473a;
+  --accent-line:#415846; --accent-panel:#2d4034; --accent-faint:#28392f;
+  --accent-chart:#a8c9af; --accent-bars:#62826e; --ring-base:#3b4b40;
+  --ring-code:#84a48e; --ring-web:#b8d4b9; --ring-chat:#b9a3c8;
+}
+:root[data-palette="rosewater"]:where([data-theme="light"]) {
+  --paper:#fbf7f6; --rail:#f5ecec; --surface:#fffdfc; --surface-muted:#f7eeef;
+  --ink:#33272d; --muted:#705f67; --soft-ink:#77666d; --line:#ede0e3; --chart-line:#eee3e5;
+  --accent:#87546a; --accent-ink:#753e57; --accent-contrast:#fff9fc; --accent-soft:#f2e2e8;
+  --accent-line:#ebd6e0; --accent-panel:#f6e8ed; --accent-faint:#faf0f2;
+  --accent-chart:#a16580; --accent-bars:#d8b3c2; --ring-base:#f0e6e9;
+  --ring-code:#c492ab; --ring-web:#9e607d; --ring-other:#ae9ac5;
+}
+:root[data-palette="rosewater"]:where([data-theme="dark"]) {
+  --paper:#251d22; --rail:#2c2128; --surface:#31262e; --surface-muted:#3c2e38;
+  --ink:#faedf3; --muted:#cfbac4; --soft-ink:#c0a9b5; --line:#483641; --chart-line:#4b3b45;
+  --accent:#e0b3c7; --accent-ink:#f2cfde; --accent-contrast:#3d2532; --accent-soft:#503442;
+  --accent-line:#5c4050; --accent-panel:#46323f; --accent-faint:#3d2b36;
+  --accent-chart:#d49bb5; --accent-bars:#93647c; --ring-base:#4b3a45;
+  --ring-code:#b47f9f; --ring-web:#e0a9c3; --ring-other:#b8a1d0;
+}
+:root[data-palette="oat"]:where([data-theme="light"]) {
+  --paper:#faf8f1; --rail:#f2eee2; --surface:#fffcf5; --surface-muted:#f3eee2;
+  --ink:#342e24; --muted:#6d6353; --soft-ink:#726858; --line:#e9e0d0; --chart-line:#ebe3d5;
+  --accent:#765d3b; --accent-ink:#624a28; --accent-contrast:#fffaef; --accent-soft:#eee4cd;
+  --accent-line:#e8dbc0; --accent-panel:#f3ead7; --accent-faint:#f7f1e4;
+  --accent-chart:#967a51; --accent-bars:#d2c09c; --ring-base:#eee7d8;
+  --ring-code:#baa378; --ring-web:#92734b; --ring-media:#c88e76;
+}
+:root[data-palette="oat"]:where([data-theme="dark"]) {
+  --paper:#262219; --rail:#2c281e; --surface:#322d22; --surface-muted:#3c3528;
+  --ink:#f8f0e1; --muted:#cec1a8; --soft-ink:#bfb095; --line:#494030; --chart-line:#4b4233;
+  --accent:#dec8a1; --accent-ink:#f1dfb9; --accent-contrast:#3b2d17; --accent-soft:#4f432c;
+  --accent-line:#594b34; --accent-panel:#453b2b; --accent-faint:#3d3528;
+  --accent-chart:#d7bd90; --accent-bars:#8d7852; --ring-base:#4a4132;
+  --ring-code:#a58d65; --ring-web:#e0c496; --ring-media:#d39782;
+}
+:root[data-palette="blue-mist"]:where([data-theme="light"]) {
+  --paper:#f5f8fa; --rail:#ebf0f4; --surface:#fcfeff; --surface-muted:#edf2f5;
+  --ink:#25303d; --muted:#5b697a; --soft-ink:#647183; --line:#dfe7ed; --chart-line:#e3ebf0;
+  --accent:#4e6686; --accent-ink:#3c5474; --accent-contrast:#f7fbff; --accent-soft:#e0eaf3;
+  --accent-line:#d7e3ee; --accent-panel:#e6eef7; --accent-faint:#edf3f9;
+  --accent-chart:#6384a4; --accent-bars:#b3c9db; --ring-base:#e8eef4;
+  --ring-code:#88a4c3; --ring-web:#54759a; --ring-tools:#a393b3;
+}
+:root[data-palette="blue-mist"]:where([data-theme="dark"]) {
+  --paper:#1c242e; --rail:#222b36; --surface:#273240; --surface-muted:#303d4d;
+  --ink:#edf3fa; --muted:#bcc9d9; --soft-ink:#aabbd1; --line:#39485b; --chart-line:#3e4d60;
+  --accent:#b0c9e3; --accent-ink:#d4e5f7; --accent-contrast:#223145; --accent-soft:#344a61;
+  --accent-line:#415971; --accent-panel:#2d4056; --accent-faint:#29384b;
+  --accent-chart:#a5c5e1; --accent-bars:#5f7b9c; --ring-base:#3a4b5e;
+  --ring-code:#809fc3; --ring-web:#abcbe9; --ring-tools:#b0a0c7;
+}
+:root[data-palette="soft-clay"]:where([data-theme="light"]) {
+  --paper:#faf7f3; --rail:#f2ebe3; --surface:#fffdfa; --surface-muted:#f4ede6;
+  --ink:#382c28; --muted:#73635a; --soft-ink:#78685f; --line:#ebdfd6; --chart-line:#eee3da;
+  --accent:#86594b; --accent-ink:#754637; --accent-contrast:#fff9f5; --accent-soft:#f0e0d6;
+  --accent-line:#ebd6c9; --accent-panel:#f4e5dc; --accent-faint:#f8eee7;
+  --accent-chart:#a77460; --accent-bars:#d7b7a7; --ring-base:#f0e7de;
+  --ring-code:#bf947f; --ring-web:#9e6c59; --ring-media:#c4a16a;
+}
+:root[data-palette="soft-clay"]:where([data-theme="dark"]) {
+  --paper:#281f1c; --rail:#2e2521; --surface:#352b27; --surface-muted:#40332e;
+  --ink:#f7ede7; --muted:#d1bfb5; --soft-ink:#c2ada1; --line:#4b3c35; --chart-line:#503f37;
+  --accent:#e0b7a5; --accent-ink:#f3d3c3; --accent-contrast:#402a20; --accent-soft:#513a31;
+  --accent-line:#5d4238; --accent-panel:#47352e; --accent-faint:#3d2e28;
+  --accent-chart:#d9a993; --accent-bars:#946c5d; --ring-base:#4d3c34;
+  --ring-code:#b28775; --ring-web:#dcae99; --ring-media:#d0ac76;
+}
+:root[data-theme]:where([data-palette]:not([data-palette="lavender"])) {
+  --tile-code: color-mix(in srgb, var(--ring-code) 18%, var(--surface));
+  --tile-web: color-mix(in srgb, var(--ring-web) 14%, var(--surface));
+  --glyph-code: var(--accent-ink);
+  --glyph-web: var(--accent-ink);
+}
+
+/* Compact, interactive samples of the palette, not screenshots or remote assets. */
+.palette-card { margin-bottom: 16px; }
+.palette-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 16px 0 0; }
+.palette-option {
+  --sample-rail:#f4f1eb; --sample-paper:#faf9f6; --sample-card:#ece4f5; --sample-ink:#5b427f;
+  position: relative; display: block; min-width: 0; cursor: pointer;
+}
+.palette-option[data-option="sage"] { --sample-rail:#e0eadf; --sample-paper:#f6f8f2; --sample-card:#c4d6c6; --sample-ink:#456957; }
+.palette-option[data-option="rosewater"] { --sample-rail:#f0e1e6; --sample-paper:#fbf7f6; --sample-card:#ebcbd8; --sample-ink:#87546a; }
+.palette-option[data-option="oat"] { --sample-rail:#eee5d0; --sample-paper:#faf8f1; --sample-card:#e6d5b3; --sample-ink:#765d3b; }
+.palette-option[data-option="blue-mist"] { --sample-rail:#dce8f0; --sample-paper:#f5f8fa; --sample-card:#c7d9ea; --sample-ink:#4e6686; }
+.palette-option[data-option="soft-clay"] { --sample-rail:#f0dfd4; --sample-paper:#faf7f3; --sample-card:#e6c5b4; --sample-ink:#86594b; }
+:root[data-theme="dark"] .palette-option { --sample-rail:#302735; --sample-paper:#241f2b; --sample-card:#4c3d60; --sample-ink:#c9afe8; }
+:root[data-theme="dark"] .palette-option[data-option="sage"] { --sample-rail:#2b3930; --sample-paper:#26322a; --sample-card:#41594a; --sample-ink:#b4cfb4; }
+:root[data-theme="dark"] .palette-option[data-option="rosewater"] { --sample-rail:#3c2c35; --sample-paper:#31262e; --sample-card:#624454; --sample-ink:#e0b3c7; }
+:root[data-theme="dark"] .palette-option[data-option="oat"] { --sample-rail:#3d3426; --sample-paper:#322d22; --sample-card:#5a4c35; --sample-ink:#dec8a1; }
+:root[data-theme="dark"] .palette-option[data-option="blue-mist"] { --sample-rail:#303e50; --sample-paper:#273240; --sample-card:#435d78; --sample-ink:#b0c9e3; }
+:root[data-theme="dark"] .palette-option[data-option="soft-clay"] { --sample-rail:#40312d; --sample-paper:#352b27; --sample-card:#624638; --sample-ink:#e0b7a5; }
+.palette-radio { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.palette-tile {
+  display: grid; grid-template-columns: 55px minmax(0, 1fr) auto; align-items: center; gap: 10px;
+  min-height: 70px; padding: 9px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+}
+.palette-tile:hover { border-color: var(--accent-line); background: var(--accent-faint); }
+.palette-radio:checked + .palette-tile { border-color: var(--accent); background: var(--accent-faint); }
+.palette-radio:focus-visible + .palette-tile { outline: 2px solid var(--accent); outline-offset: 3px; }
+.palette-swatch {
+  display: grid; grid-template-columns: 21% minmax(0, 1fr); overflow: hidden;
+  height: 40px; background: var(--sample-paper); border: 1px solid color-mix(in srgb, var(--sample-ink) 26%, var(--sample-paper)); border-radius: 6px;
+}
+.swatch-rail { background: var(--sample-rail); border-right: 1px solid color-mix(in srgb, var(--sample-ink) 16%, var(--sample-rail)); }
+.swatch-plot { margin: 7px 6px 6px; border-top: 3px solid var(--sample-card); display: flex; gap: 2px; align-items: flex-end; }
+.swatch-plot i { flex: 1; background: var(--sample-card); border-radius: 1px 1px 0 0; height: 38%; }
+.swatch-plot i:nth-child(2) { height: 69%; }
+.swatch-plot i:nth-child(3) { height: 51%; }
+.swatch-plot i:nth-child(4) { height: 78%; background: var(--sample-ink); }
+.palette-caption { min-width: 0; line-height: 1.3; }
+.palette-caption strong { display: block; color: var(--ink); font-size: 13px; font-weight: 700; }
+.palette-caption small { color: var(--muted); display: block; font-size: 11.1px; margin-top: 2px; }
+.palette-mark { display: grid; place-items: center; width: 19px; height: 19px; color: transparent; border: 1px solid var(--line); border-radius: 50%; }
+.palette-mark .icon { width: 12px; height: 12px; stroke-width: 2.1; }
+.palette-radio:checked + .palette-tile .palette-mark { color: var(--accent-contrast); background: var(--accent); border-color: var(--accent); }
+@media (max-width: 920px) { .palette-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 580px) {
+  .palette-card { margin-bottom: 11px; }
+  .palette-grid { gap: 8px; }
+  .palette-tile { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 8px; }
+  .palette-swatch { grid-column: 1/-1; height: 35px; }
+  .swatch-plot { max-width: 63px; }
+  .palette-caption small { font-size: 10.5px; }
+}

@@ -1,0 +1,25 @@
+/* Irminsul theme overrides — loaded after styles.css.
+ * Use `irminsul theme init` to copy these files into your XDG config directory.
+ * Refresh the dashboard after an edit; no rebuild or restart is needed.
+ *
+ * :root[data-palette="sage"][data-theme="light"] {
+ *   --paper: #f5f8f3;
+ *   --rail: #edf3ea;
+ *   --accent: #3a6652;
+ *   --accent-ink: #315846;
+ *   --accent-panel: #e5f0e6;
+ *   --accent-soft: #e0ede3;
+ *   --accent-chart: #54876c;
+ *   --accent-bars: #b1cebc;
+ *   --radius: 12px;
+ * }
+ * :root[data-palette="sage"][data-theme="dark"] { --accent: #a2d0af; }
+ * Place optional fonts, CSS, scripts, or images in web/extras/.
+ */
+
+.brand-mark { background: transparent; }
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
