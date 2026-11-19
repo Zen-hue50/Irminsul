@@ -1,0 +1,82 @@
+# Optional GitHub Actions workflow for Irminsul.
+#
+# Builds static/portable Linux binaries and attaches them to a GitHub Release
+# with exactly the names the install.sh one-liner looks for:
+#
+#   irminsul-x86_64-gnu.tar.gz     irminsul-x86_64-musl.tar.gz
+#   irminsul-aarch64-gnu.tar.gz    irminsul-aarch64-musl.tar.gz
+#
+# Once the first release with these assets is published, `curl ... | sh`
+# installs Irminsul without Rust or a C compiler; until then the installer
+# transparently falls back to building from source.
+#
+# Usage: commit as .github/workflows/release.yml, then push a tag:
+#   git tag v0.2.1 && git push origin v0.2.1
+#
+# The musl targets produce fully static binaries that run on any Linux
+# (Alpine, NixOS, older glibc), so you can also point people at the tarball
+# directly.
+
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - triple: x86_64-unknown-linux-gnu
+            asset: x86_64-gnu
+          - triple: x86_64-unknown-linux-musl
+            asset: x86_64-musl
+          - triple: aarch64-unknown-linux-gnu
+            asset: aarch64-gnu
+          - triple: aarch64-unknown-linux-musl
+            asset: aarch64-musl
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.triple }}
+
+      - name: Install cargo-zigbuild and zig
+        run: pip install cargo-zigbuild ziglang
+
+      - name: Build
+        run: cargo zigbuild --locked --release --target ${{ matrix.triple }}
+
+      - name: Package
+        run: |
+          cp "target/${{ matrix.triple }}/release/irminsul" irminsul
+          tar -czf "irminsul-${{ matrix.asset }}.tar.gz" irminsul
+          sha256sum "irminsul-${{ matrix.asset }}.tar.gz" >> sha256sums.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: irminsul-${{ matrix.asset }}
+          path: irminsul-${{ matrix.asset }}.tar.gz
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+      - name: Collect checksums
+        run: for f in irminsul-*.tar.gz; do sha256sum "$f"; done > sha256sums.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            irminsul-*.tar.gz
+            sha256sums.txt
