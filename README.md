@@ -1,5 +1,10 @@
 # Irminsul
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/287b39e5-d5a8-42af-a2c5-f903680ab5bc" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6cfbf1ff-b98f-4d19-b7c2-87b09e95764c" />
+
+
 **Digital wellbeing for Linux / Hyprland.** Irminsul is a small Rust daemon with a private browser dashboard. It records foreground app time, active screen time, and switches between apps, then turns those totals into a daily, seven-day, or 30-day report. It does not need a browser tab or a tray app to record activity.
 
 ## Install from a Hyprland terminal
